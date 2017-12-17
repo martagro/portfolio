@@ -98,6 +98,10 @@ body {
     width: 50%;
 }
 
+#about article p {
+    line-height: 25px;
+}
+
 section h2 {
     font-size: 30px;
     font-weight: 300;
@@ -105,10 +109,84 @@ section h2 {
     margin-bottom: 36px;
 }
 
-#skills-icons figure {
+#skills #skills-icons figure {
     display: inline-block;
+}
+
+#skills p {
+    line-height: 25px;
 }
 
 #skills {
     text-align: center;
+}
+
+#contact {
+    background-color: #213b50;
+    color: #fff;
+    overflow: hidden;
+    /*musi być overflow hidden bo inaczej kontener nie pomieści zawartości i nie wyświetli się float left z poniższej reguły*/
+}
+
+.contact-data,
+.contact-form {
+    width: 50%;
+    float: left;
+}
+
+
+#contact > div > h2 {
+    text-align: left;
+    font-size: 38px;
+    padding-left: 40px;
+}
+
+#contact address {
+    font-style: normal;
+    line-height: 25px;
+    margin: 72px 0;
+    padding-left: 40px;
+}
+
+#contact address span {
+    color: #1ac056;
+}
+
+#contact .contact-form {
+    margin-top: 100px;
+}
+
+#contact .contact-form input#name-surname,
+#email,
+#submit,
+#message {
+    width: 80%;
+    padding: 15px;
+    margin-bottom: 15px;
+    border: #2b4a64 solid 0;
+    background-color: #2b4a64;
+
+}
+
+#contact .contact-form input#name-surname:focus,
+#email:focus,
+#message:focus,
+#message:focus {
+    background-color: #426684;
+}
+
+#contact .contact-form input#submit {
+    width: auto;
+    padding: 15px 30px;
+    float: right;
+    border: 1px solid #1ac056;
+    color: #fff;
+    font-weight: 600;
+    background-color: #1ac056;
+    float: none;
+}
+
+#contact .contact-form input#submit:hover {
+    background-color: #fff;
+    color: #1ac056;
 }
