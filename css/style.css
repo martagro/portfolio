@@ -48,12 +48,24 @@ body {
     color: #fff;
 }
 
-#main-header > .main-header-content > h1 {
+#main-header .main-header-content h1 {
     font-family: 'Roboto', sans-serif;
+    font-size: 6em;
+    font-weight: 400;
 }
 
-#main-header > ..main-header-content {
+#main-header .main-header-content h1 span {
+    color: #1ac056;
+}
+
+#main-header .main-header-content h2 {
+    font-size 5em;
+    font-weight: 200;
+}
+
+#main-header > .main-header-content {
     padding: 30vh;
+    text-align: center;
 }
 
 #about {
@@ -64,11 +76,14 @@ body {
 
 #about > h2 {
     text-align: center;
+
 }
 
 #about figure img {
     height: 350px;
     max-width: 100%;
+    border: white solid 15px;
+    border-radius: 20px;
 }
 
 #about figure {
@@ -80,4 +95,11 @@ body {
 #about article {
     float: left;
     width: 50%;
+}
+
+section h2 {
+    font-size: 30px;
+    font-weight: 300;
+    margin-top: 60px;
+    margin-bottom: 36px;
 }
