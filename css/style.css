@@ -27,6 +27,7 @@ body {
 #main-nav > ul > li {
     list-style: none;
     display: inline-block;
+    padding: 20px 40px;
 }
 
 #main-nav > ul > li > a {
@@ -42,13 +43,41 @@ body {
 #main-header {
     background-image: url(../img/header-background.jpg);
     background-size: cover;
+    background-repeat: no-repeat;
     background-position: center;
+    color: #fff;
 }
 
 #main-header > .main-header-content > h1 {
     font-family: 'Roboto', sans-serif;
 }
 
-#main-header > div {
-    padding: 30vh%;
+#main-header > ..main-header-content {
+    padding: 30vh;
+}
+
+#about {
+    padding: 0 80px 100px;
+    width: 100%;
+    background-color: #f9fcfe;
+}
+
+#about > h2 {
+    text-align: center;
+}
+
+#about figure img {
+    height: 350px;
+    max-width: 100%;
+}
+
+#about figure {
+    margin: 0;
+    float: left;
+    width: 50%;
+}
+
+#about article {
+    float: left;
+    width: 50%;
 }
