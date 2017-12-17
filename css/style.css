@@ -160,7 +160,7 @@ section h2 {
 #email,
 #submit,
 #message {
-    width: 80%;
+    width: 100%;
     padding: 15px;
     margin-bottom: 15px;
     border: #2b4a64 solid 0;
@@ -178,7 +178,6 @@ section h2 {
 #contact .contact-form input#submit {
     width: auto;
     padding: 15px 30px;
-    float: right;
     border: 1px solid #1ac056;
     color: #fff;
     font-weight: 600;
