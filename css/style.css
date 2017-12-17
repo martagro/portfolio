@@ -69,6 +69,11 @@ body {
     text-align: center;
 }
 
+section {
+    padding: 0 80px 100px;
+    width: 100%;
+}
+
 #about {
     padding: 0 80px 100px;
     width: 100%;
@@ -138,14 +143,12 @@ section h2 {
 #contact > div > h2 {
     text-align: left;
     font-size: 38px;
-    padding-left: 40px;
 }
 
 #contact address {
     font-style: normal;
     line-height: 25px;
     margin: 72px 0;
-    padding-left: 40px;
 }
 
 #contact address span {
