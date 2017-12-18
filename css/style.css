@@ -185,7 +185,7 @@ section h2 {
     color: #fff;
     font-weight: 600;
     background-color: #1ac056;
-    float: none;
+    float: right;
 }
 
 #contact .contact-form input#submit:hover {
