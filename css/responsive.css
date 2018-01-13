@@ -1,7 +1,9 @@
 @media all and (max-width: 1200px) {
     #portfolio .portfolio-item {
         width: 50%;
+        /*ustawienie dwóch obrazków obok siebie i dolnego obrazka na 100% szerokości kontenera żeby się nie powtarzał obrazek musi być we włściwościach tła background-size: cover! w sekcji #portfolio .portfolio-item*/
     }
+
     #portfolio .portfolio-item:last-child {
         width: 100%;
     }
