@@ -8,6 +8,9 @@ body {
     margin: 0;
     font-weight: 300;
 }
+.toggle, #drop {
+    display: none;
+}
 
 #main-nav {
     display: inline-block;
@@ -72,6 +75,12 @@ body {
 section {
     padding: 0 80px 100px;
     width: 100%;
+    overflow: hidden;
+}
+
+span {
+    color: #1ac056;
+    font-weight: 400;
 }
 
 #about {
@@ -126,11 +135,13 @@ section h2 {
     text-align: center;
 }
 
+/*Sekcja kontakt*/
+
 #contact {
     background-color: #213b50;
     color: #fff;
-    overflow: hidden;
-    /*musi być overflow hidden bo inaczej kontener nie pomieści zawartości i nie wyświetli się float left z poniższej reguły*/
+
+    /*musi być overflow ustawiony w section (wyżej na początku dokumentu) hidden bo inaczej kontener nie pomieści zawartości i nie wyświetli się float left z poniższej reguły; jest to zamknięcie float:left zamiast użycia clear: both; jeśli chcemy użyć clear trzeba stworzyć pustego diva; taki overflow działa na floatowane elementy*/
 }
 
 .contact-data,
@@ -181,11 +192,12 @@ section h2 {
 #contact .contact-form input#submit {
     width: auto;
     padding: 15px 30px;
-    border: 1px solid #1ac056;
+    border: none;
     color: #fff;
     font-weight: 600;
     background-color: #1ac056;
     float: right;
+    transition: all 0.3s;
 }
 
 #contact .contact-form input#submit:hover {
@@ -199,6 +211,7 @@ section h2 {
     height: 38px;
     margin-right: 30px;
     line-height: 38px;
+    /*wyśrodkował ikony w kwadracikach razem z text align, wartość musi być taka sama jak wymiary pojemnika (kwadracika)*/
     text-align: center;
     border: 1px solid #fff;
     font-size: 22px;
@@ -209,4 +222,90 @@ section h2 {
     background-color: #fff;
     border: 1px solid #213b50;
     color: #213b50;
+}
+
+
+/*Sekcja portfolio*/
+
+#portfolio-item-1 {
+    background-image: url(../img/portfolio1.jpg);
+}
+
+#portfolio-item-2 {
+    background-image: url(../img/portfolio2.jpg);
+}
+
+#portfolio-item-3 {
+    background-image: url(../img/portfolio4.jpg);
+}
+
+#portfolio .portfolio-item {
+    width: 33.333%;
+    height: 350px;
+    float: left;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /*cover ucina to co się nie mieści w zależności od ustawionej pozycji tła, a content doskalowuje obrazki nie ucinając ich*/
+    background-position: center;
+}
+
+#portfolio .portfolio-item .item-mask {
+    background-color: rgba(33, 59, 80, 0.7);
+    height: 100%;
+    width: 100%;
+    position: relative;
+    opacity: 0;
+    /* opacity: 0.6; opacity jeśli jest ustawione w ten sposób, to napis który jest na tym tle też będzie przezroczysty, trzeba kolor tła ustawić w rgba i tam ustawić opacity!!!*/
+    transition: all 0.3s;
+}
+
+#portfolio .portfolio-item .item-mask:hover {
+    opacity: 1;
+}
+
+#portfolio .portfolio-item .portfolio-content {
+    border: 1px solid #fff;
+    color: #fff;
+    position: absolute;
+    width: 95%;
+    height: 95%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    top: 50%;
+    transform: translateY(-50%);
+    /*można też dać oprócz top bottom 50% i wyłączyć margin auto, left, right i wtedy transform nie bedzie translateY tylko po porstu translae i dodatkowo drugie -50% czyli: translate(-50% -50%)*/
+}
+
+#portfolio .portfolio-item .portfolio-content-inner {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+    padding: 0 10px;
+    text-align: center;
+}
+
+#portfolio .portfolio-item a {
+    color: #fff;
+    font-size: 2em;
+    transition: all 0.3s;
+    /*transition musi by ustawiony przed hover żeby zmiana była płynna w dwie strony, a nie skokowa po zjechaniu łapką z linka*/
+}
+
+#portfolio .portfolio-item a:hover {
+    color: #fff;
+    font-size: 2em;
+    color: #1ac056;
+}
+
+#portfolio {
+    text-align: center;
+}
+
+footer {
+    background-color: #142634;
+    color: #fff;
+    padding: 5px 80px;
 }
